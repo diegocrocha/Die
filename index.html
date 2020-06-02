@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+
+<script src="https://kit.fontawesome.com/a7213766bf.js" crossorigin="anonymous"></script>
+
+<body>
+    <div class="header">
+        <div id="logo">
+            Die.
+        </div>
+
+        <div id="nav-lateral">
+            <a href=""><img src="frame.png" alt=""></a>
+        </div>
+       
+         <ul id="nav">
+            <li><a href="">Who.</a></li>
+            <li><a href="">Projects.</a></li>
+            <li><a href="">Contact.</a> </li>
+        </ul>   
+    </div>
+
+
+    <div class="home">
+        <div id="logo-meio"> 
+            <center>
+            <img src="logo-transpa.png" alt="">
+            </center>   
+        </div>
+        <div id="img-direita">  
+            <center>
+            <img src="brain.png" alt="">
+            </center>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="who">
+
+        <div class="who-esquerdo">
+            <div id="descri">
+                <h1 id="h1-ola">Olá, <br> <br></h1><span id="conteudodesc">sou Diego Rocha, gaúcho residente em São Paulo, estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e buscando cada dia aprender mais.  </span>
+            </div>
+
+            <div id="ling">
+                    <center>
+                    <h4>MINHAS SKILLS</h4> <br>
+                
+
+                    <div class="icons">
+                        <i class="fab fa-html5 fa-4x" id="htmlI"></i>
+                        <center>
+                        <h5>HTML5</h5>
+                        </center>
+                    </div>
+                    
+                    <div class="icons">
+                        <i class="fab fa-css3-alt fa-4x" id="htmlI"></i>
+                        <center>
+                        <h5>CSS</h5>
+                        </center>
+                    </div>
+                    
+                    <div class="icons">
+                        <i class="fab fa-js-square fa-4x" id="htmlI"></i>
+                        <center>
+                        <h5>JavaScript</h5>
+                        </center>
+                    </div>  
+                </center>   
+            </div>
+        </div>
+            
+        <div id="game">
+            <canvas id="gc" width="400" height="400" style="border-radius: 5px;"></canvas>
+        </div>
+    </div>
+
+    <hr>
+
+    
+        
+</body>
+</html>
+
+
+<script>
+    window.onload=function(){
+        canv=document.getElementById("gc");
+        ctx = canv.getContext("2d");
+        document.addEventListener("keydown", keyPush);
+        setInterval(game, 1000/15);
+    }
+    px=py=10;
+    gs=tc=20;
+    ax=ay=15
+    xv=yv=0;
+    trail=[];
+    tail = 5;
+    function game(){
+        px+=xv;
+        py+=yv;
+        if(px<0){
+            px= tc-1
+        }
+        if(px>tc-1){
+            px= 0;
+        }
+        if(py<0){
+            py= tc-1;
+        }
+        if(py>tc-1){
+            py= 0;
+        }
+        ctx.fillStyle = "black";
+        ctx.fillRect(0,0,canv.width,canv.width, canv.height);
+
+        ctx.fillStyle = "lime";
+        for(var i=0; i<trail.length; i++){
+            ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2, gs-2);
+            if(trail[i].x==px && trail[i].y==py) {
+                tail = 5;
+            }
+        }
+
+        trail.push({x:px,y:py});
+        while(trail.length>tail){
+            trail.shift();
+        }
+        if(ax==px && ay==py) {
+                tail++;
+                ax=Math.floor(Math.random()*tc);
+                ay=Math.floor(Math.random()*tc);
+            }
+
+        ctx.fillStyle = "red";       
+        ctx.fillRect(ax*gs,ay*gs,gs-2, gs-2);
+    }
+
+    function keyPush(evt) {
+        switch(evt.keyCode) {
+            case 37:
+                xv=-1;yv=0;  
+                break;
+            case 38:
+                xv=0;yv=-1;  
+                break;
+            case 39:
+                xv=1;yv=0;  
+                break;
+            case 40:
+                xv=0;yv=1;  
+                break;
+        }
+    }
+</script>
