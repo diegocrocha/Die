@@ -1,58 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-
-body{
-    background-color: #1E1E1E;
-}
-.header {
-    height: 100px;
-    width: 100%;
-    background-color: #1E1E1E;
-    color: white;
-    min-width: max-content;
-    display: inline-block;
-    
-}
-
-
-.header #logo{
-    width: 5%;
-    margin-top: 30px; 
-    margin-left: 5%;
-    font-size: 30px;
-    float: left;
-}
-
-.header li { 
-    padding-right: 18%;
-}
-
-
-.header #nav {  
-    display: flex;
-    padding-top: 0;
-    width: 50%;
-    list-style:none; 
-    margin: 0;
-    padding: 40px 0 0 26%;
-    
-}
-
-.header #nav-lateral {
-    float: right;
-    margin-top: 30px;
-    margin-right: 4%;
-    width: 5%;
-}
-
-.header #nav-lateral img {
-    width: 70px;
-}
-a {
-    text-decoration: none;
-    color: white;
+body {
+    background-color: #303030;
 }
 
 hr {
@@ -63,93 +14,174 @@ hr {
     border-radius: 5px;
     border-color: #3FC1C9;
     height: 1px;
-}
+}   
 
-.home {
+
+.header {
     width: 100%;
-    height: 620px;
-
-}
-
-.home #logo-meio {
-    width: 35%;
-    float: left;
-    margin: 10% 10% 0;
-    height: 300px;
- 
-}
-
-
-.home #img-direita {
-    width: 35%;
-    float: left;
-    margin:6% 10% 0 0;
-    height: 430px;
-
-}
-
-.home #logo-meio img{
-    width:70% ;
-}
-
-.home #img-direita img{
-    width:60% ;
-}
-
-
-.who {
-    width: 100%;
-    height: 500px;
-    background-color: #1E1E1E;
-}
-
-.who-esquerdo {
-    width: 500px;
-    height: 400px;
-    float: left;
-    margin-left: 11%;
-    margin-top: 7%;
-}
-.who #ling{
-    float: left;
-    width: 100%;
-    height: 100px;
+    height: 7vw;
+    background-color: #303030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
 }
 
-.who #ling .icons {
+.header #logo-header {
+    width: 20%;
+    height: 100%;
+}
+
+.header #logo-header #logo-h {
+   font-size: 3vw;   
+   margin-left: 35%;
+   margin-top: 8%;
+}
+
+.header #nav {
+    width: 60%;
+    height: 100%;
+}
+
+.header #nav div {
+  display: inline-block;
+  font-size: 1.2vw;  
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+.header #bar {
+    width: 20%;
+    height: 100%;
+}
+
+.header #bar img {
+    width: 25%;
+    margin-top: 10%;
+    margin-left: 40%;
+    
+}
+
+.section {
+    width: 100%;
+    height: 40vw;
+    /* background-color: tomato; */
+    display: flex;
+    color: white;
+}
+
+.section .sec1 {
+    width: 40%;
+    height: 80%;
+    /* background-color: violet; */
+    margin-top: 5%;
+    margin-left: 6.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section #img-direita img {
+    width: 50%;
+}
+
+.section .sec2 {
+    width: 40%;
+    height: 80%;
+    /* background-color: violet; */
+    margin-top: 5%;
+    margin-left: 6.6%;
+    font-size: 1.3vw;
+}
+
+.section .sec2 #ling{
+    margin-top: 20%;
+}
+
+.section .sec2 h4 {
+    margin-left: 35%;
+}
+.section .sec2 .icons {
     display: inline-block;
-    margin-left: 40px;   
+    margin-left: 16%;
 }
 
-.who #game {
-    float: right;
-    width: 400px;
-    height: 400px;
-    margin-top: 4%;
-    margin-right: 13%;
+.section .sec2 #ling .icons #icon-css {
+    margin-left: 25%;
 }
 
-#descri {
-    height: 200px;
-    width: 400px;
-    float: left;
-    margin-left: 50px;
+
+#game h3 {
+    margin: 15% 0 0 25%;
+    font-size: 1.5vw;
 }
 
-#conteudodesc {
-    font-size: 19px;
+#game button {
+    margin: 15% 0 0 38%;
+    width: 25%;
+    height: 15%;
+    border-radius: 10px;
+    border-color: #3FC1C9;
+}
+
+.sec3 {
+    width: 86.6%;
+    height: 80%;
+    /* background-color: violet; */
+    margin-top: 5%;
+    margin-left: 6.6%;
+    font-size: 1.3vw;
+    display: flex;
+}
+
+.sec3 .port {
+    font-size: 1.5vw;
+    width: 20%;
+    height: 60%;
+    margin-top: 7%;
+    margin-left: 10%;
+}
+
+.sec3 #portifolio {
+    background-color: #3FC1C9; 
+    border-radius: 10px;
+}
+
+.sec3 #portifolio h4{
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.sec3 #lavin h4{
+    margin-left: 23%;
+}
+
+.sec3 #eva h4{
+    margin-left: 23%;
+}
+
+.sec3 #port-cont {
+    margin: 7%;
+}
+
+.port img {
+    width: 90%;
+    margin: 4%;
+}
+a {
+    text-decoration: none;
     color: white;
 }
 
-#h1-ola {
-    color: #3FC1C9;
+footer {
+    width: 100%;
+    height: 10vw;
+    background-color: #303030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
-
-
-
-
-
 
 
 
