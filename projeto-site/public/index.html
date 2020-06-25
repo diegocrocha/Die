@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="imagens/skull.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Rokkitt&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="funcoes.js"></script>
+</head>
+
+<script src="https://kit.fontawesome.com/a7213766bf.js" crossorigin="anonymous"></script>
+
+<body id="bodi">
+    <div id="mensagem_usuario">
+        <div id="conteudo_menssagem"></div>
+        <button onclick="msg_usuario()">X</button>
+    </div>
+    <div class="header">
+        <div id="logo-header">
+            <i class="fas fa-skull"></i>
+        </div>
+
+        <div id="nav">
+            <div><a href="#hr1"> Who.</a></div>
+            <div><a href="#hr2">Projects.</a></div>
+            <div><a href="#center">Contact.</a> </div>
+        </div>
+
+        <div id="bar">
+            <a href="login.html"><img src="./imagens/frame.png" alt="" class="frame" id="frame"></a> 
+            <div id="b_bugado">
+                <b id="b_usuario" onclick="message()"></b>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <div class="sec1">
+            <div id="logo-esq">
+            <i class="fas fa-skull"></i> 
+            <h1>Die.</h1>
+            </div>
+            
+        </div>
+
+        <div class="sec1" id="img-direita">
+            <img src="./imagens/brain.png" alt="">
+        </div>
+    </div>
+
+    <hr id="hr1">
+
+    <div class="section">
+
+        <div id="snake" onclick="close_game()">
+            <canvas id="gc" width="400" height="400"></canvas>
+        </div>
+
+        <div class="sec2">   
+
+            <div id="cima">
+                <div id="descri">
+                    <h1 id="h1-ola">Hi! <br>  </h1>I'm Diego Rocha, gaucho living in São Paulo. Student of Systems Analysis and Development, passionate about technology.
+                </div>
+
+                <div id="icone-hack">
+                    <img src="./imagens/diego1.png" alt="">
+                </div>
+
+                <div id="game">
+                    <h3>Just for fun, enjoy an old game</h3> <br>
+                    <button onclick="start_game()">Start <i class="fas fa-dragon"></i></button>
+                </div>
+            </div>
+          
+
+            <div id="baixo">              
+                <h4>MY SKILLS</h4> <br> 
+                <div id="icones-skill">
+                    <i class="fab fa-html5 fa-1x" id="htmlI"><h2>HTML5</h2></i>
+
+                    <i class="fab fa-js-square fa-1x" id="htmlI"><h2>JavaScript</h2></i>  
+                        
+                    <i class="fab fa-css3-alt fa-1x" id="htmlI" id="css3-i"><h2>CSS3</h2></i>
+                                          
+                </div>
+            </div>
+          
+        </div>               
+    </div>
+    <hr id="hr2">
+
+    <div class="section">
+        <div class="sec3">
+            
+            <div class="port" id="portifolio">
+                <h4>Portfolio</h4>
+                <div id="port-cont">Meet some projects developed for customers worldwide</div>
+            </div> 
+           
+            <div class="port" id="lavin">
+                 <a href="lukas prog/index.html" target="_blank">
+                <h4>Lavin Gaymer</h4>
+                <img src="./imagens/lavin.png" alt="">
+                </a>
+            </div>
+            
+            <div class="port" id="eva">
+                <a href="eva/3.Site/Index/html/index.html" target="_blank">
+                <h4>Eva Solutions</h4>
+                <img src="./imagens/eva.png" alt="" id="eva">
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div id="esq">
+
+            <h1>Diego Carreia Rocha</h1> <br>
+
+            <i class="fas fa-phone-square-alt"> <div> +55 51 98310-0604</div></i> <br>
+            <i class="fas fa-envelope-square"><div>diego.crocha@hotmail.com</div> </i> <br>
+
+            <div id="social-icon">
+
+                <a href="https://www.linkedin.com/in/diego-rocha-999a0b100/" target="_blank" id="a_left">
+                <i class="fab fa-linkedin" id="icon-left"></i> </a>
+
+                <a href="https://github.com/diegocrocha" target="_blank"><i class="fab fa-github-square"></i></a>
+                
+                
+                <a href=" https://www.instagram.com/dierochaa/?hl=pt-br" target="_blank"><i class="fab fa-instagram"></i></a>
+               
+                
+            </div>
+        </div>
+
+        <div id="center">
+            <h2>For more information, send a message!</h2> <br>
+            <form id="form_cadastro" method="post">
+                <input id="nome_i" type="text" name="nome" required minlength="3" placeholder="Name" class="input-padrao">
+                
+                <input id="email_i" type="text" name="email" required minlength="4" placeholder="E-mail"  class="input-padrao">
+              
+                <input id="telefone_i" type="text" name="telefone" required minlength="4" placeholder="Cellphone"  class="input-padrao">
+                
+                <textarea id="mensagem_i" class="input-padrao mensagem" id="" name="mensagem" placeholder="Message..."></textarea>
+
+                <div id="mensagem_erro"></div>
+            </form>
+                                
+            <button id="btn_entrar" onclick="cadastrar()">Send</button>
+            <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
+            
+            <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+                Erro no cadastro
+            </div>
+        </div>
+
+
+        <div class="footer_an">                     
+            <div class="footer_fundo">
+                <div class="footer_carro"></div>
+                <div class="footer_bicicleta"></div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
+<!-- snake -->
+<script>
+    document.getElementById("snake").style.display = "none";
+
+    function start_game() {
+        document.getElementById("snake").style.display = "block";
+        document.getElementById("bodi").style.overflow = "hidden"
+
+    }
+    
+
+    function close_game(){
+        document.getElementById("snake").style.display = "none";
+        document.getElementById("bodi").style.overflow = "scroll";
+        document.getElementById("bodi").style.overflowX = "hidden";
+
+    }
+
+    window.onload=function(){
+        canv=document.getElementById("gc");
+        ctx = canv.getContext("2d");
+        document.addEventListener("keydown", keyPush);
+        setInterval(game, 1000/15);
+    }
+    px=py=10;
+    gs=tc=20;
+    ax=ay=15
+    xv=yv=0;
+    trail=[];
+    tail = 5;
+    function game(){
+        px+=xv;
+        py+=yv;
+        if(px<0){
+            px= tc-1
+        }
+        if(px>tc-1){
+            px= 0;
+        }
+        if(py<0){
+            py= tc-1;
+        }
+        if(py>tc-1){
+            py= 0;
+        }
+        ctx.fillStyle = "black";
+        ctx.fillRect(0,0,canv.width,canv.width, canv.height);
+
+        ctx.fillStyle = "#3FC1C9";
+        for(var i=0; i<trail.length; i++){
+            ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2, gs-2);
+            if(trail[i].x==px && trail[i].y==py) {
+                tail = 5;
+            }
+        }
+
+        trail.push({x:px,y:py});
+        while(trail.length>tail){
+            trail.shift();
+        }
+        if(ax==px && ay==py) {
+                tail++;
+                ax=Math.floor(Math.random()*tc);
+                ay=Math.floor(Math.random()*tc);
+            }
+
+        ctx.fillStyle = "red";       
+        ctx.fillRect(ax*gs,ay*gs,gs-2, gs-2);
+    }
+
+    function keyPush(evt) {
+        switch(evt.keyCode) {
+            case 37:
+                xv=-1;yv=0;  
+                break;
+            case 38:
+                xv=0;yv=-1;  
+                break;
+            case 39:
+                xv=1;yv=0;  
+                break;
+            case 40:
+                xv=0;yv=1;  
+                break;
+        }
+    }
+</script>
+
+
+<!-- cadastrar -->
+<script>
+
+    verificar_autenticacao();
+
+    function cadastrar() {
+        email_v = email_i.value;
+        if( (email_v.search("@") == -1) ||
+            (email_v.search(".") == -1 ) ||
+            (email_v.search(" ") >= 1)){
+            mensagem_erro.innerHTML = `The email format is: user@domain.com`;
+        } else {
+       
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            console.log(response)
+            if (response.ok) {
+
+                mensagem_erro.innerHTML = `Your message was sent successfully`;
+               img_aguarde.style.display='none';
+               nome_i.value = ``;
+               email_i.value = ``;
+               telefone_i.value = ``;
+               mensagem_i.value = ``;
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            } 
+        }); }
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
+</script> 
+
+
+<!-- mensagem_usuario -->
+<script>
+    mensagem_usuario.style.display = "none";
+
+    function msg_usuario() {
+    mensagem_usuario.style.display = "none";
+    }
+
+    function message() {
+    mensagem_usuario.style.display = "block";
+
+        fetch("/usuarios/recuperarmensagem", {
+            method: "GET"
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+
+                resposta.json().then(function(ress) {
+                    conteudo_menssagem.innerHTML = `Message: ${(ress[0].mensagem_usuario)}`
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+    }
+</script>

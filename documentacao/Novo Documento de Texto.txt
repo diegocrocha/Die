@@ -1,0 +1,30 @@
+Eu decidi fazer meu projeto não diretamente sobre algo que eu gosto como jogo, música, esporte,
+entre outras coisas, mas um site que serve de portfolio para eu mostrar meus projetos realizados
+e também para que eu possa ver minha evolução tanto na qualidade dos projetos quanto no conhecimento
+de tecnologias e linguajens e é um projeto com uma facilidade maior para dar continuidade além dessa 
+sprint/semestre.
+
+
+Já que estou no começo da minha jornada profissonal meu site não é algo com muito conteúdo 
+eu usei isto como vantagem para me dar ao luxo de refazer a estrutura do meu site diversas vezes
+tentando cada vez melhorar e deixar mais simples seu desenvolvimento chegando em um resultado que 
+me agradou bastante conseguindo possionar tudo de forma fácil e aprender metodos para isso otimos
+
+
+Eu sou uma pessoa timida, introvertida 
+e minimalista (no caso nao gostar de coisas com muito enfeite e chamativas) mas também tenho o meu lado divertido 
+e descontraido e no meu projeto eu usei cores, icones e imagens que remetem muito a mim.
+
+
+a maior superação foi que consegui criar uma rotina de estudos, deixando de lado de jogar (mas digamos
+que não 100%, já que fui atrás de um curso de fazer jogos com JS para por um no meu site que em alguns momentos
+perdi uns minutinhos lá) e até ver series mas não era um estudo por obrigação mas algo que se tornou prazeroso
+eu faço por estar gostando
+flyer
+
+Não houve grandes dificuldades para realizar este projeto além de bastante tempo estudando e pesquisando,
+mas que foi um tempo muito bem gasto, pois consegui aprender muito e entender muitas coisas que a algum 
+tempo atrás quando comecei a estudar sobre isto (antes da faculdade) eu não conseguia entender como cada
+coisa funcionava eu basicamente replicava o que era passado no curso que estava fazendo, e agora com certeza
+eu já entendo o que é cada coisa sabendo fazer como eu bem entender 
+

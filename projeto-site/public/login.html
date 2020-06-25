@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="imagens/skull.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Rokkitt&display=swap" rel="stylesheet">
+</head>
+<script src="https://kit.fontawesome.com/a7213766bf.js" crossorigin="anonymous"></script>
+
+<body>
+    <div class="header">
+        <div id="logo-header">
+            <i class="fas fa-skull"></i>
+        </div>
+
+        <div id="nav">
+            <div><a href="#hr1"> </a></div>
+            <div><a href="#hr2"></a></div>
+            <div><a href="#center"></a> </div>
+        </div>
+
+        <div id="" id="bar-login">
+           <a href="index.html" id="a_loginbar">Leave</a> 
+        </section>
+        </div>
+    </div>
+    <hr>
+    <div class="login-div">
+        <h2>To check your messages, enter the required data</h2>
+        <form id="form_login" method="post" onsubmit="return entrar()">
+            <input type="text" name="nome" placeholder="Name" class="input-padrao">
+            <br>
+            <input type="text" name="email" placeholder="Email" class="input-padrao">
+            <br>
+            <button id="btn_entrar">Enter</button>
+        </form>
+        
+        <img src="aguarde.gif" id="img_aguarde" style="display: none;">
+        
+        <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+            
+        </div>
+    </div>
+
+    <div class="footer_an">                     
+        <div class="footer_fundo">
+            <div class="footer_carro"></div>
+            <div class="footer_bicicleta"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+    
+
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome_usuario;
+                    
+                    window.location.href = 'index.html';
+                    alert('Login successfully performed')
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display= 'none';
+        div_erro.style.display = 'block';
+        div_erro.innerHTML = resposta;
+    }
+
+</script>
+
